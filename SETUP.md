@@ -77,3 +77,7 @@ The landing page has a basic structure with:
 
 Ready to start building Section 1! 🚀
 
+
+
+
+
