@@ -22,64 +22,73 @@ export default function TokenomicsSection() {
       id="tokenomics"
       className="relative w-full overflow-hidden bg-white"
     >
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 lg:px-0 min-h-[600px]">
+      <div className="w-full max-w-[1440px] mx-auto h-[1024px] px-10">
         {/* Title */}
-        <h2 className="pt-[90px] text-center font-bold text-3xl md:text-4xl leading-none tracking-[0.03em] text-black">
+        <h2 className="pt-[90px] text-center font-bold text-[40px] leading-none tracking-[0.03em] text-black font-quicksand">
           TOKENOMICS
         </h2>
 
         {/* Token Logo */}
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-6">
           <Image
             src="/images/e-emerald.svg"
             alt="EMRL.D Token"
-            width={140}
-            height={140}
-            className="w-28 h-28 md:w-36 md:h-36"
+            width={110}
+            height={110}
+            className="w-[110px] h-[110px]"
           />
         </div>
 
-        {/* Token Stats Grid */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mx-auto mt-10 max-w-[900px]">
-          {tokenStats.map((stat, index) => (
-            <div
-              key={index}
-              className="flex flex-col justify-center items-center w-[183px] h-[164px] bg-[#004132] rounded-[20px]"
-            >
-              <span className="font-bold text-4xl leading-none tracking-[0.03em] text-white text-center">
-                {stat.value}
-              </span>
-              <span className="mt-3 font-bold text-base leading-none tracking-[0.03em] text-white text-center">
-                {stat.label}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* Token Details Table */}
-        <div className="mx-auto mt-10 mb-16 max-w-[603px] bg-[#004132] rounded-[20px] px-8 py-6">
-          <h3 className="text-center font-bold text-xl leading-none tracking-[0.03em] text-white mb-5">
-            Token Details
-          </h3>
-
-          <div className="flex flex-col">
-            {tokenDetails.map((detail, index) => (
-              <div 
+        {/* Main Content */}
+        <div className="mt-14 flex items-start justify-center gap-12">
+          {/* Left: 2x2 Stats Grid */}
+          <div className="grid grid-cols-2 gap-10">
+            {tokenStats.map((stat, index) => (
+              <div
                 key={index}
-                className={`flex flex-col sm:flex-row justify-between items-center py-3 ${
-                  index > 0 ? 'border-t border-white/50' : ''
-                }`}
+                className="flex flex-col justify-center items-center w-[200px] h-[190px] bg-[#004132] rounded-[20px]"
               >
-                <span className="font-bold text-base leading-none tracking-[0.03em] text-white">
-                  {detail.label}
+                <span className="font-bold text-[40px] leading-none tracking-[0.03em] text-white text-center font-quicksand">
+                  {stat.value}
                 </span>
-                <span className={`mt-1 sm:mt-0 text-center sm:text-right font-bold leading-none tracking-[0.03em] text-white break-all ${
-                  detail.isAddress ? 'text-sm' : 'text-base'
-                }`}>
-                  {detail.value}
+                <span className="mt-2 font-bold text-[16px] leading-none tracking-[0.03em] text-white text-center font-quicksand">
+                  {stat.label}
                 </span>
               </div>
             ))}
+          </div>
+
+          {/* Right: Token Details Card */}
+          <div className="w-[760px] bg-[#004132] rounded-[20px] overflow-hidden">
+            <div className="px-10 py-6">
+              <h3 className="font-bold text-[20px] leading-none tracking-[0.03em] text-white font-quicksand">
+                Token Details
+              </h3>
+            </div>
+
+            <div className="border-t border-white/25" />
+
+            <div className="flex flex-col">
+              {tokenDetails.map((detail, index) => (
+                <div key={index}>
+                  <div className="flex flex-row justify-between items-center px-10 py-6">
+                    <span className="font-bold text-[14px] leading-none tracking-[0.03em] text-white font-quicksand">
+                      {detail.label}
+                    </span>
+                    <span
+                      className={`text-right font-bold leading-none tracking-[0.03em] text-white font-quicksand ${
+                        detail.isAddress ? "text-[12px]" : "text-[14px]"
+                      }`}
+                    >
+                      {detail.value}
+                    </span>
+                  </div>
+                  {index < tokenDetails.length - 1 ? (
+                    <div className="border-t border-white/25" />
+                  ) : null}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

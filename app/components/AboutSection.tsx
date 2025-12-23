@@ -6,51 +6,86 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative w-full overflow-hidden bg-[#00674F]"
+      className="relative w-full overflow-hidden bg-[#00674F] pt-2 pb-6 px-4"
     >
-      <div className="relative mx-auto flex w-full max-w-[1440px] flex-col px-6 py-10 md:px-8 lg:px-10">
-        <h2 className="mx-auto mb-8 w-full max-w-[1023px] text-center font-[700] tracking-[0.03em] text-white text-[20px] md:text-[26px] lg:text-[32px] leading-none">
-          Tokenized Emeralds. Institutional Liquidity. Transparent Value.
-        </h2>
+      <div className="mx-auto w-full max-w-[1440px]">
+        {/* Desktop Layout */}
+        <div className="block">
+          {/* Top Center Heading */}
+          <h2 className="text-center font-bold text-[32px] leading-none tracking-[0.03em] text-white font-quicksand mb-8">
+            Tokenized Emeralds. Institutional Liquidity. Transparent Value.
+          </h2>
 
-        <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-start lg:gap-12">
-          <div className="w-full max-w-[640px] lg:w-[600px] text-white">
-            <p className="font-[700] text-[16px] md:text-[18px] lg:text-[20px] leading-[180%] tracking-[0.03em]">
-              <span className="font-[700]">EMRL.D</span> introduces a new standard for alternative assets by tokenizing{" "}
-              <span className="font-[700]">graded and institutionally certified emerald gemstone stockpiles</span>. Built
-              to solve historic illiquidity and opaque pricing in the gemstone trade, EMRL.D combines real-world asset
-              backing, disciplined Net Asset Value (NAV) governance, and structured liquidity mechanisms.
-            </p>
+          {/* Two Column Layout */}
+          <div className="flex flex-row gap-2 pl-28">
+            {/* First Column - Left */}
+            <div className="flex flex-col max-w-[600px]">
+              {/* Main Paragraph */}
+              <p className="mt-5 font-normal text-[20px] leading-relaxed tracking-[0.03em] text-white font-quicksand">
+                EMRL.D introduces a new standard for alternative assets by tokenizing graded and institutionally certified emerald gemstone stockpiles. Built to solve historic illiquidity and opaque pricing in the gemstone trade, EMRL.D combines real-world asset backing, disciplined Net Asset Value (NAV) governance, and structured liquidity mechanisms.
+              </p>
 
-            <div className="mt-6 space-y-2">
-              <p className="font-[500] text-[16px] md:text-[18px] lg:text-[20px] leading-[180%] tracking-[0.03em]">
-                This is not speculative crypto.
+              {/* Gap */}
+              <div className="h-20" />
+
+              {/* Emphasis Text */}
+              <p className="font-normal text-[20px] leading-relaxed tracking-[0.03em] text-white font-quicksand">
+                This is not speculative crypto. This is <span className="font-bold">real assets</span>, priced transparently, governed institutionally.
               </p>
-              <p className="font-[500] text-[16px] md:text-[18px] lg:text-[20px] leading-[180%] tracking-[0.03em]">
-                This is <span className="font-[700]">real assets, priced transparently, governed institutionally</span>.
-              </p>
+
+              {/* Button - Center Aligned */}
+              <div className="flex justify-center mt-6">
+                <Link
+                  href="#whitepaper"
+                  className="flex items-center justify-center bg-white text-black font-bold text-base leading-none tracking-[0.03em] px-8 py-3 rounded-lg hover:opacity-90 transition-opacity font-quicksand"
+                >
+                  Check Our Whitepaper
+                </Link>
+              </div>
             </div>
 
-            <div className="mt-7 flex justify-center lg:justify-start">
+            {/* Second Column - Right */}
+            <div className="flex-1 flex justify-center items-center">
+              {/* Rectangle Placeholder */}
+              <div className="w-[710px] h-[409px] bg-[#D9D9D9] rounded-lg" />
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile/Tablet Layout */}
+        <div className="hidden">
+          {/* Top Center Heading */}
+          <h2 className="text-center font-bold text-2xl leading-tight tracking-[0.03em] text-white mt-2 font-quicksand px-4 mb-8">
+            Tokenized Emeralds. Institutional Liquidity. Transparent Value.
+          </h2>
+
+          {/* Content Stack */}
+          <div className="flex flex-col gap-6 px-4">
+            {/* Main Paragraph */}
+            <p className="font-normal text-sm leading-relaxed tracking-[0.03em] text-white font-quicksand">
+              EMRL.D introduces a new standard for alternative assets by tokenizing graded and institutionally certified emerald gemstone stockpiles. Built to solve historic illiquidity and opaque pricing in the gemstone trade, EMRL.D combines real-world asset backing, disciplined Net Asset Value (NAV) governance, and structured liquidity mechanisms.
+            </p>
+
+            {/* Emphasis Text */}
+            <p className="font-normal text-sm leading-relaxed tracking-[0.03em] text-white font-quicksand">
+              This is not speculative crypto. This is <span className="font-bold">real assets</span>, priced transparently, governed institutionally.
+            </p>
+
+            {/* Button */}
+            <div className="flex justify-center">
               <Link
                 href="#whitepaper"
-                className="inline-flex h-[45px] w-[240px] items-center justify-center rounded-[65px] bg-white px-7 py-3 font-[700] text-[16px] tracking-[0.03em] text-black hover:opacity-90 transition-opacity"
+                className="flex items-center justify-center bg-white text-black font-bold text-sm leading-none tracking-[0.03em] px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-quicksand"
               >
                 Check Our Whitepaper
               </Link>
             </div>
-          </div>
 
-          <div className="w-full min-h-[280px] bg-[#D9D9D9] lg:h-[409px] lg:w-[710px]">
-            {/* Placeholder for video/image content */}
+            {/* Rectangle Placeholder - Mobile */}
+            <div className="w-full aspect-710/409 bg-[#D9D9D9] rounded-lg mt-4" />
           </div>
         </div>
       </div>
     </section>
   );
 }
-
-
-
-
-

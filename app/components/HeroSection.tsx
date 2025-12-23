@@ -6,12 +6,12 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden min-h-screen bg-[#00674F]"
+      className="relative w-full overflow-hidden min-h-screen bg-[#00674F] pb-20"
     >
       {/* Desktop Layout */}
-      <div className="hidden lg:block relative w-full h-[1024px]">
+      <div className="block relative w-full h-[1024px]">
         {/* Background Image */}
-        <div className="absolute left-0 right-0 top-[129px] h-[895px] w-full">
+        <div className="absolute left-0 right-0 top-[129px] bottom-1 w-full">
           <Image
             src="/images/section1-bg-image.svg"
             alt="Emerald Gemstone"
@@ -42,7 +42,7 @@ export default function HeroSection() {
             <h1 className="font-bold text-[70px] leading-none tracking-[0.03em] text-white">
               EMRL.D
             </h1>
-            <p className="font-bold text-[35px] leading-[120%] tracking-[0.03em] text-white mt-2">
+            <p className="font-normal text-[40px] leading-[120%] tracking-[0.03em] text-white mt-2 font-quicksand">
               Institutional-Grade Liquidity
               <br />
               for Emeralds Through
@@ -54,7 +54,7 @@ export default function HeroSection() {
       </div>
 
       {/* Mobile/Tablet Layout */}
-      <div className="lg:hidden relative w-full min-h-screen">
+      <div className="hidden relative w-full min-h-screen">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -69,7 +69,7 @@ export default function HeroSection() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col justify-center items-start min-h-screen px-6 md:px-12 pt-32 pb-16">
+        <div className="relative z-10 flex flex-col justify-center items-start min-h-screen px-6 pt-32 pb-16">
           {/* E Token Logo */}
           <div className="mb-6">
             <Image
@@ -77,18 +77,18 @@ export default function HeroSection() {
               alt="EMRLD Symbol"
               width={200}
               height={200}
-              className="w-40 h-40 md:w-52 md:h-52"
+              className="w-40 h-40"
               priority
             />
           </div>
 
           {/* Title */}
-          <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl leading-none tracking-[0.03em] text-white">
+          <h1 className="font-bold text-5xl leading-none tracking-[0.03em] text-white">
             EMRL.D
           </h1>
 
           {/* Subtitle */}
-          <p className="font-bold text-xl md:text-2xl lg:text-[35px] leading-[130%] tracking-[0.03em] text-white mt-4">
+          <p className="font-bold text-xl leading-[130%] tracking-[0.03em] text-white mt-4">
             Institutional-Grade Liquidity
             <br />
             for Emeralds Through

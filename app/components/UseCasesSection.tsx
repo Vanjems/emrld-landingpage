@@ -1,6 +1,7 @@
 "use client";
 
 export default function UseCasesSection() {
+  return null;
   return (
     <section
       id="use-cases"
@@ -8,7 +9,7 @@ export default function UseCasesSection() {
     >
       <div className="w-full max-w-[1440px] mx-auto relative min-h-[512px]">
         {/* Desktop Layout */}
-        <div className="hidden lg:block relative w-full h-[512px]">
+        <div className="block relative w-full h-[512px]">
           {/* Left Content */}
           <div className="absolute left-[98px] top-[30px]">
             <h2 className="font-bold text-2xl leading-none tracking-[0.03em] text-black">
@@ -58,7 +59,7 @@ export default function UseCasesSection() {
         </div>
 
         {/* Mobile/Tablet Layout */}
-        <div className="lg:hidden px-6 py-8">
+        <div className="hidden px-6 py-8">
           <h2 className="font-bold text-[22px] leading-none tracking-[0.03em] text-black">
             Use Cases & Market Adoption
           </h2>

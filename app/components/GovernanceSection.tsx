@@ -1,6 +1,7 @@
 "use client";
 
 export default function GovernanceSection() {
+  return null;
   return (
     <section
       id="governance"
@@ -8,7 +9,7 @@ export default function GovernanceSection() {
     >
       <div className="w-full max-w-[1440px] mx-auto relative min-h-[512px]">
         {/* Desktop Layout */}
-        <div className="hidden lg:block relative w-full h-[512px]">
+        <div className="block relative w-full h-[512px]">
           {/* Left Dark Rectangle */}
           <div className="absolute left-0 top-0 w-[590px] h-[512px] bg-[#4E4E4E]" />
 
@@ -43,7 +44,7 @@ export default function GovernanceSection() {
         </div>
 
         {/* Mobile/Tablet Layout */}
-        <div className="lg:hidden px-6 py-8">
+        <div className="hidden px-6 py-8">
           {/* Mobile placeholder */}
           <div className="mb-6 w-full h-[200px] bg-[#4E4E4E] rounded-lg" />
 
