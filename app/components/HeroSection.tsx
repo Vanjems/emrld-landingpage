@@ -6,23 +6,12 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden"
-      style={{ 
-        minHeight: '100vh',
-        background: '#00674F'
-      }}
+      className="relative w-full overflow-hidden min-h-screen bg-[#00674F]"
     >
-      {/* Desktop Layout - Exact Figma specs */}
-      <div className="hidden lg:block relative w-full" style={{ height: '1024px' }}>
-        {/* Background Image - Position: top: 129px, full width, height: 895px */}
-        <div 
-          className="absolute left-0 right-0"
-          style={{ 
-            top: '129px',
-            height: '895px',
-            width: '100%',
-          }}
-        >
+      {/* Desktop Layout */}
+      <div className="hidden lg:block relative w-full h-[1024px]">
+        {/* Background Image */}
+        <div className="absolute left-0 right-0 top-[129px] h-[895px] w-full">
           <Image
             src="/images/section1-bg-image.svg"
             alt="Emerald Gemstone"
@@ -30,27 +19,14 @@ export default function HeroSection() {
             className="object-cover object-center"
             priority
           />
-          {/* Gradient overlay for text readability */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 40%, transparent 70%)'
-            }}
-          />
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/40 via-40% to-transparent" />
         </div>
 
         {/* Content Container */}
         <div className="relative w-full max-w-[1440px] mx-auto h-full">
-          {/* E Token Logo - Position: left: 91px, top: 316px, 280x280 */}
-          <div 
-            className="absolute"
-            style={{ 
-              left: '91px', 
-              top: '316px',
-              width: '280px',
-              height: '280px',
-            }}
-          >
+          {/* E Token Logo */}
+          <div className="absolute left-[91px] top-[316px] w-[280px] h-[280px]">
             <Image
               src="/images/e-emerald.svg"
               alt="EMRLD Symbol"
@@ -61,38 +37,12 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Title & Subtitle - Position: left: 101px, top: 577px */}
-          <div 
-            className="absolute"
-            style={{ 
-              left: '101px', 
-              top: '577px',
-              width: '579px',
-            }}
-          >
-            <h1
-              style={{
-                fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                fontWeight: 700,
-                fontSize: '70px',
-                lineHeight: '100%',
-                letterSpacing: '0.03em',
-                color: '#FFFFFF',
-              }}
-            >
+          {/* Title & Subtitle */}
+          <div className="absolute left-[101px] top-[577px] w-[579px]">
+            <h1 className="font-bold text-[70px] leading-none tracking-[0.03em] text-white">
               EMRL.D
             </h1>
-            <p
-              style={{
-                fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                fontWeight: 700,
-                fontSize: '35px',
-                lineHeight: '120%',
-                letterSpacing: '0.03em',
-                color: '#FFFFFF',
-                marginTop: '8px',
-              }}
-            >
+            <p className="font-bold text-[35px] leading-[120%] tracking-[0.03em] text-white mt-2">
               Institutional-Grade Liquidity
               <br />
               for Emeralds Through
@@ -115,12 +65,7 @@ export default function HeroSection() {
             priority
           />
           {/* Gradient overlay */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(180deg, rgba(0,103,79,0.3) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.9) 100%)'
-            }}
-          />
+          <div className="absolute inset-0 bg-linear-to-b from-[#00674F]/30 via-black/80 via-50% to-black/90" />
         </div>
 
         {/* Content */}
@@ -138,31 +83,12 @@ export default function HeroSection() {
           </div>
 
           {/* Title */}
-          <h1
-            style={{
-              fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-              fontWeight: 700,
-              fontSize: 'clamp(48px, 12vw, 70px)',
-              lineHeight: '100%',
-              letterSpacing: '0.03em',
-              color: '#FFFFFF',
-            }}
-          >
+          <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl leading-none tracking-[0.03em] text-white">
             EMRL.D
           </h1>
 
           {/* Subtitle */}
-          <p
-            style={{
-              fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-              fontWeight: 700,
-              fontSize: 'clamp(20px, 5vw, 35px)',
-              lineHeight: '130%',
-              letterSpacing: '0.03em',
-              color: '#FFFFFF',
-              marginTop: '16px',
-            }}
-          >
+          <p className="font-bold text-xl md:text-2xl lg:text-[35px] leading-[130%] tracking-[0.03em] text-white mt-4">
             Institutional-Grade Liquidity
             <br />
             for Emeralds Through

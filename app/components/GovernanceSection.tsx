@@ -4,67 +4,25 @@ export default function GovernanceSection() {
   return (
     <section
       id="governance"
-      className="relative w-full overflow-hidden"
-      style={{ background: '#FFFFFF' }}
+      className="relative w-full overflow-hidden bg-white"
     >
-      <div className="w-full max-w-[1440px] mx-auto relative" style={{ minHeight: '512px' }}>
+      <div className="w-full max-w-[1440px] mx-auto relative min-h-[512px]">
         {/* Desktop Layout */}
         <div className="hidden lg:block relative w-full h-[512px]">
           {/* Left Dark Rectangle */}
-          <div
-            className="absolute"
-            style={{
-              left: 0,
-              top: 0,
-              width: '590px',
-              height: '512px',
-              background: '#4E4E4E',
-            }}
-          />
+          <div className="absolute left-0 top-0 w-[590px] h-[512px] bg-[#4E4E4E]" />
 
           {/* Right Content */}
-          <div 
-            className="absolute"
-            style={{ left: '618px', top: '28px', width: '761px' }}
-          >
-            <h2
-              style={{
-                fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                fontWeight: 700,
-                fontSize: '24px',
-                lineHeight: '100%',
-                letterSpacing: '0.03em',
-                color: '#000000',
-              }}
-            >
+          <div className="absolute left-[618px] top-7 w-[761px]">
+            <h2 className="font-bold text-2xl leading-none tracking-[0.03em] text-black">
               Governance, Compliance & Long-Term Vision
             </h2>
 
-            <p
-              style={{
-                marginTop: '16px',
-                fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                fontWeight: 700,
-                fontSize: '20px',
-                lineHeight: '180%',
-                letterSpacing: '0.03em',
-                color: '#000000',
-              }}
-            >
+            <p className="mt-4 font-bold text-xl leading-[180%] tracking-[0.03em] text-black">
               Building the Emerald Standard
             </p>
 
-            <div
-              style={{
-                marginTop: '20px',
-                fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                fontWeight: 700,
-                fontSize: '20px',
-                lineHeight: '180%',
-                letterSpacing: '0.03em',
-                color: '#000000',
-              }}
-            >
+            <div className="mt-5 font-bold text-xl leading-[180%] tracking-[0.03em] text-black">
               <p className="mb-2">EMRL.D governance principles include:</p>
               <ul className="list-disc pl-6 mb-4">
                 <li>NAV-based pricing discipline</li>
@@ -87,54 +45,17 @@ export default function GovernanceSection() {
         {/* Mobile/Tablet Layout */}
         <div className="lg:hidden px-6 py-8">
           {/* Mobile placeholder */}
-          <div
-            className="mb-6"
-            style={{
-              width: '100%',
-              height: '200px',
-              background: '#4E4E4E',
-              borderRadius: '8px',
-            }}
-          />
+          <div className="mb-6 w-full h-[200px] bg-[#4E4E4E] rounded-lg" />
 
-          <h2
-            style={{
-              fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-              fontWeight: 700,
-              fontSize: '22px',
-              lineHeight: '100%',
-              letterSpacing: '0.03em',
-              color: '#000000',
-            }}
-          >
+          <h2 className="font-bold text-[22px] leading-none tracking-[0.03em] text-black">
             Governance, Compliance & Long-Term Vision
           </h2>
 
-          <p
-            style={{
-              marginTop: '12px',
-              fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-              fontWeight: 700,
-              fontSize: '18px',
-              lineHeight: '180%',
-              letterSpacing: '0.03em',
-              color: '#000000',
-            }}
-          >
+          <p className="mt-3 font-bold text-lg leading-[180%] tracking-[0.03em] text-black">
             Building the Emerald Standard
           </p>
 
-          <div
-            className="mt-4"
-            style={{
-              fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-              fontWeight: 700,
-              fontSize: '16px',
-              lineHeight: '180%',
-              letterSpacing: '0.03em',
-              color: '#000000',
-            }}
-          >
+          <div className="mt-4 font-bold text-base leading-[180%] tracking-[0.03em] text-black">
             <p className="mb-2">EMRL.D governance principles include:</p>
             <ul className="list-disc pl-6 mb-4">
               <li>NAV-based pricing discipline</li>
@@ -156,8 +77,3 @@ export default function GovernanceSection() {
     </section>
   );
 }
-
-
-
-
-

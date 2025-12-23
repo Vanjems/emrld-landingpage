@@ -27,73 +27,28 @@ export default function Section1Cards() {
   return (
     <section
       id="section-1"
-      className="relative w-full overflow-hidden"
-      style={{
-        background: '#FDFBF9',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        borderRadius: '2px',
-      }}
+      className="relative w-full overflow-hidden bg-[#FDFBF9] border border-white/10 rounded-sm"
     >
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 lg:px-0 py-8 lg:py-0" style={{ minHeight: '512px' }}>
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 lg:px-0 py-8 lg:py-0 min-h-[512px]">
         {/* Desktop Layout */}
-        <div className="hidden lg:flex gap-6 justify-center items-start" style={{ paddingTop: '34px', paddingBottom: '62px' }}>
+        <div className="hidden lg:flex gap-6 justify-center items-start pt-[34px] pb-[62px]">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="relative flex flex-col items-center"
-              style={{
-                width: '403px',
-                height: '416px',
-                background: '#D9D9D9',
-                borderRadius: '30px',
-              }}
+              className="relative flex flex-col items-center w-[403px] h-[416px] bg-[#D9D9D9] rounded-[30px]"
             >
               {/* Title - Underlined */}
-              <h3
-                className="text-center"
-                style={{
-                  marginTop: '58px',
-                  fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '24px',
-                  lineHeight: '180%',
-                  letterSpacing: '0.03em',
-                  textDecorationLine: 'underline',
-                  color: '#000000',
-                }}
-              >
+              <h3 className="mt-[58px] text-center font-bold text-2xl leading-[180%] tracking-[0.03em] underline text-black">
                 {card.title}
               </h3>
 
               {/* Subtitle */}
-              <p
-                className="text-center px-8"
-                style={{
-                  marginTop: '16px',
-                  fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '24px',
-                  lineHeight: '100%',
-                  letterSpacing: '0.03em',
-                  color: '#000000',
-                }}
-              >
+              <p className="mt-4 text-center px-8 font-semibold text-2xl leading-none tracking-[0.03em] text-black">
                 {card.subtitle}
               </p>
 
               {/* Description */}
-              <p
-                className="px-10"
-                style={{
-                  marginTop: '24px',
-                  fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                  fontWeight: 400,
-                  fontSize: '20px',
-                  lineHeight: '180%',
-                  letterSpacing: '0.03em',
-                  color: '#000000',
-                }}
-              >
+              <p className="mt-6 px-10 font-normal text-xl leading-[180%] tracking-[0.03em] text-black">
                 {card.description}
                 <Link 
                   href={card.link}
@@ -111,52 +66,17 @@ export default function Section1Cards() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="relative flex flex-col items-center p-6"
-              style={{
-                background: '#D9D9D9',
-                borderRadius: '20px',
-              }}
+              className="relative flex flex-col items-center p-6 bg-[#D9D9D9] rounded-[20px]"
             >
-              <h3
-                className="text-center"
-                style={{
-                  fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '20px',
-                  lineHeight: '140%',
-                  letterSpacing: '0.03em',
-                  textDecorationLine: 'underline',
-                  color: '#000000',
-                }}
-              >
+              <h3 className="text-center font-bold text-xl leading-[140%] tracking-[0.03em] underline text-black">
                 {card.title}
               </h3>
 
-              <p
-                className="text-center mt-3"
-                style={{
-                  fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '18px',
-                  lineHeight: '120%',
-                  letterSpacing: '0.03em',
-                  color: '#000000',
-                }}
-              >
+              <p className="mt-3 text-center font-semibold text-lg leading-[120%] tracking-[0.03em] text-black">
                 {card.subtitle}
               </p>
 
-              <p
-                className="mt-4"
-                style={{
-                  fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                  fontWeight: 400,
-                  fontSize: '16px',
-                  lineHeight: '180%',
-                  letterSpacing: '0.03em',
-                  color: '#000000',
-                }}
-              >
+              <p className="mt-4 font-normal text-base leading-[180%] tracking-[0.03em] text-black">
                 {card.description}
                 <Link 
                   href={card.link}
@@ -172,8 +92,3 @@ export default function Section1Cards() {
     </section>
   );
 }
-
-
-
-
-

@@ -4,68 +4,25 @@ export default function UseCasesSection() {
   return (
     <section
       id="use-cases"
-      className="relative w-full overflow-hidden"
-      style={{
-        background: '#FDFBF9',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        borderRadius: '2px',
-      }}
+      className="relative w-full overflow-hidden bg-[#FDFBF9] border border-white/10 rounded-sm"
     >
-      <div className="w-full max-w-[1440px] mx-auto relative" style={{ minHeight: '512px' }}>
+      <div className="w-full max-w-[1440px] mx-auto relative min-h-[512px]">
         {/* Desktop Layout */}
         <div className="hidden lg:block relative w-full h-[512px]">
           {/* Left Content */}
-          <div 
-            className="absolute"
-            style={{ left: '98px', top: '30px' }}
-          >
-            <h2
-              style={{
-                fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                fontWeight: 700,
-                fontSize: '24px',
-                lineHeight: '100%',
-                letterSpacing: '0.03em',
-                color: '#000000',
-              }}
-            >
+          <div className="absolute left-[98px] top-[30px]">
+            <h2 className="font-bold text-2xl leading-none tracking-[0.03em] text-black">
               Use Cases & Market Adoption
             </h2>
 
-            <p
-              style={{
-                marginTop: '12px',
-                fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                fontWeight: 700,
-                fontSize: '20px',
-                lineHeight: '180%',
-                letterSpacing: '0.03em',
-                color: '#000000',
-              }}
-            >
+            <p className="mt-3 font-bold text-xl leading-[180%] tracking-[0.03em] text-black">
               From Portfolio Allocation to Trade Settlement
             </p>
           </div>
 
           {/* Content Text */}
-          <div
-            className="absolute"
-            style={{ 
-              left: '98px', 
-              top: '120px',
-              width: '640px',
-            }}
-          >
-            <div
-              style={{
-                fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                fontWeight: 700,
-                fontSize: '20px',
-                lineHeight: '180%',
-                letterSpacing: '0.03em',
-                color: '#000000',
-              }}
-            >
+          <div className="absolute left-[98px] top-[120px] w-[640px]">
+            <div className="font-bold text-xl leading-[180%] tracking-[0.03em] text-black">
               <p className="mb-4">
                 <span className="font-bold">For Investors</span>
                 <br />
@@ -97,58 +54,20 @@ export default function UseCasesSection() {
           </div>
 
           {/* Right Dark Rectangle */}
-          <div
-            className="absolute"
-            style={{
-              right: 0,
-              top: 0,
-              width: '613px',
-              height: '512px',
-              background: '#4E4E4E',
-            }}
-          />
+          <div className="absolute right-0 top-0 w-[613px] h-[512px] bg-[#4E4E4E]" />
         </div>
 
         {/* Mobile/Tablet Layout */}
         <div className="lg:hidden px-6 py-8">
-          <h2
-            style={{
-              fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-              fontWeight: 700,
-              fontSize: '22px',
-              lineHeight: '100%',
-              letterSpacing: '0.03em',
-              color: '#000000',
-            }}
-          >
+          <h2 className="font-bold text-[22px] leading-none tracking-[0.03em] text-black">
             Use Cases & Market Adoption
           </h2>
 
-          <p
-            style={{
-              marginTop: '8px',
-              fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-              fontWeight: 700,
-              fontSize: '18px',
-              lineHeight: '180%',
-              letterSpacing: '0.03em',
-              color: '#000000',
-            }}
-          >
+          <p className="mt-2 font-bold text-lg leading-[180%] tracking-[0.03em] text-black">
             From Portfolio Allocation to Trade Settlement
           </p>
 
-          <div
-            className="mt-6"
-            style={{
-              fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-              fontWeight: 700,
-              fontSize: '16px',
-              lineHeight: '180%',
-              letterSpacing: '0.03em',
-              color: '#000000',
-            }}
-          >
+          <div className="mt-6 font-bold text-base leading-[180%] tracking-[0.03em] text-black">
             <p className="mb-4">
               <span className="font-bold">For Investors</span>
               <br />
@@ -173,22 +92,9 @@ export default function UseCasesSection() {
           </div>
 
           {/* Mobile placeholder */}
-          <div
-            className="mt-6"
-            style={{
-              width: '100%',
-              height: '200px',
-              background: '#4E4E4E',
-              borderRadius: '8px',
-            }}
-          />
+          <div className="mt-6 w-full h-[200px] bg-[#4E4E4E] rounded-lg" />
         </div>
       </div>
     </section>
   );
 }
-
-
-
-
-

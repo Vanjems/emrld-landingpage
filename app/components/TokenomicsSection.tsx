@@ -13,35 +13,23 @@ const tokenDetails = [
   { label: "Token Name", value: "EMRL.D" },
   { label: "Token Custodian", value: "Gemini Trust Company, LLC" },
   { label: "Public Chain", value: "Lumia Blockchain" },
-  { label: "Contract Address", value: "0xa5173f751e183e9aF8372A6E861b9FBbB4fa4d0A" },
+  { label: "Contract Address", value: "0xa5173f751e183e9aF8372A6E861b9FBbB4fa4d0A", isAddress: true },
 ];
 
 export default function TokenomicsSection() {
   return (
     <section
       id="tokenomics"
-      className="relative w-full overflow-hidden"
-      style={{ background: '#FFFFFF' }}
+      className="relative w-full overflow-hidden bg-white"
     >
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 lg:px-0" style={{ minHeight: '600px' }}>
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-6 lg:px-0 min-h-[600px]">
         {/* Title */}
-        <h2
-          className="text-center"
-          style={{
-            paddingTop: '90px',
-            fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-            fontWeight: 700,
-            fontSize: 'clamp(28px, 5vw, 40px)',
-            lineHeight: '100%',
-            letterSpacing: '0.03em',
-            color: '#000000',
-          }}
-        >
+        <h2 className="pt-[90px] text-center font-bold text-3xl md:text-4xl leading-none tracking-[0.03em] text-black">
           TOKENOMICS
         </h2>
 
         {/* Token Logo */}
-        <div className="flex justify-center" style={{ marginTop: '30px' }}>
+        <div className="flex justify-center mt-8">
           <Image
             src="/images/e-emerald.svg"
             alt="EMRL.D Token"
@@ -52,46 +40,16 @@ export default function TokenomicsSection() {
         </div>
 
         {/* Token Stats Grid */}
-        <div 
-          className="flex flex-wrap justify-center gap-4 md:gap-6 mx-auto"
-          style={{ marginTop: '40px', maxWidth: '900px' }}
-        >
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mx-auto mt-10 max-w-[900px]">
           {tokenStats.map((stat, index) => (
             <div
               key={index}
-              className="flex flex-col justify-center items-center"
-              style={{
-                width: '183px',
-                height: '164px',
-                background: '#004132',
-                borderRadius: '20px',
-              }}
+              className="flex flex-col justify-center items-center w-[183px] h-[164px] bg-[#004132] rounded-[20px]"
             >
-              <span
-                style={{
-                  fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '36px',
-                  lineHeight: '100%',
-                  letterSpacing: '0.03em',
-                  color: '#FFFFFF',
-                  textAlign: 'center',
-                }}
-              >
+              <span className="font-bold text-4xl leading-none tracking-[0.03em] text-white text-center">
                 {stat.value}
               </span>
-              <span
-                style={{
-                  marginTop: '12px',
-                  fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '16px',
-                  lineHeight: '100%',
-                  letterSpacing: '0.03em',
-                  color: '#FFFFFF',
-                  textAlign: 'center',
-                }}
-              >
+              <span className="mt-3 font-bold text-base leading-none tracking-[0.03em] text-white text-center">
                 {stat.label}
               </span>
             </div>
@@ -99,29 +57,8 @@ export default function TokenomicsSection() {
         </div>
 
         {/* Token Details Table */}
-        <div 
-          className="mx-auto"
-          style={{ 
-            marginTop: '40px', 
-            marginBottom: '60px',
-            maxWidth: '603px',
-            background: '#004132',
-            borderRadius: '20px',
-            padding: '24px 32px',
-          }}
-        >
-          <h3
-            className="text-center"
-            style={{
-              fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-              fontWeight: 700,
-              fontSize: '20px',
-              lineHeight: '100%',
-              letterSpacing: '0.03em',
-              color: '#FFFFFF',
-              marginBottom: '20px',
-            }}
-          >
+        <div className="mx-auto mt-10 mb-16 max-w-[603px] bg-[#004132] rounded-[20px] px-8 py-6">
+          <h3 className="text-center font-bold text-xl leading-none tracking-[0.03em] text-white mb-5">
             Token Details
           </h3>
 
@@ -129,35 +66,16 @@ export default function TokenomicsSection() {
             {tokenDetails.map((detail, index) => (
               <div 
                 key={index}
-                className="flex flex-col sm:flex-row justify-between items-center py-3"
-                style={{
-                  borderTop: index > 0 ? '0.5px solid #FFFFFF' : 'none',
-                }}
+                className={`flex flex-col sm:flex-row justify-between items-center py-3 ${
+                  index > 0 ? 'border-t border-white/50' : ''
+                }`}
               >
-                <span
-                  style={{
-                    fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                    fontWeight: 700,
-                    fontSize: '16px',
-                    lineHeight: '100%',
-                    letterSpacing: '0.03em',
-                    color: '#FFFFFF',
-                  }}
-                >
+                <span className="font-bold text-base leading-none tracking-[0.03em] text-white">
                   {detail.label}
                 </span>
-                <span
-                  className="mt-1 sm:mt-0 text-center sm:text-right"
-                  style={{
-                    fontFamily: 'var(--font-quicksand), Quicksand, sans-serif',
-                    fontWeight: 700,
-                    fontSize: detail.label === "Contract Address" ? '14px' : '16px',
-                    lineHeight: '100%',
-                    letterSpacing: '0.03em',
-                    color: '#FFFFFF',
-                    wordBreak: 'break-all',
-                  }}
-                >
+                <span className={`mt-1 sm:mt-0 text-center sm:text-right font-bold leading-none tracking-[0.03em] text-white break-all ${
+                  detail.isAddress ? 'text-sm' : 'text-base'
+                }`}>
                   {detail.value}
                 </span>
               </div>
@@ -168,8 +86,3 @@ export default function TokenomicsSection() {
     </section>
   );
 }
-
-
-
-
-
