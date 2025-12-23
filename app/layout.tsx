@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const quicksand = Quicksand({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-quicksand",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "EMRLD - Tokenized Emerald, Institutional Liquidity, Tokenized Real-World Assets",
-  description: "Participate in the Next Asset Standard with EMRLD - Tokenized emerald with institutional liquidity and real-world asset backing.",
+  title: "EMRL.D - Institutional-Grade Liquidity for Emeralds Through Tokenized Real-World Assets",
+  description: "Participate in the Next Asset Standard with EMRL.D - Tokenized emerald with institutional liquidity and real-world asset backing.",
+  keywords: ["emerald", "tokenized assets", "RWA", "blockchain", "liquidity", "gemstones"],
 };
 
 export default function RootLayout({
@@ -19,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${quicksand.variable} antialiased`}>
         {children}
       </body>
     </html>
